@@ -20,7 +20,7 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
-  return width*height;
+  return width * height;
 }
 
 
@@ -36,7 +36,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCircleCircumference(radius) {
-  return 2*3.14*radius;
+  return 2 * 3.14 * radius;
 }
 
 /**
@@ -52,7 +52,7 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  return (value1+value2)/2;
+  return (value1 + value2) / 2;
 }
 
 /**
@@ -70,8 +70,8 @@ function getAverage(value1, value2) {
  *   (0,0) (1,0)    => 1
  *   (-5,0) (10,-10) => 18.027756377319946
  */
-function getDistanceBetweenPoints(x1, y1, x2, y2 ) {
-  return Math.sqrt(Math.pow((x2-x1),2) + Math.pow((y2-y1),2));
+function getDistanceBetweenPoints(x1, y1, x2, y2) {
+  return Math.sqrt((x2 - x1) ** 2) + ((y2 - y1) ** 2);
 }
 
 /**
@@ -87,7 +87,7 @@ function getDistanceBetweenPoints(x1, y1, x2, y2 ) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-  return -b/a;
+  return -b / a;
 }
 
 
@@ -158,9 +158,9 @@ function parseNumberFromString(value) {
  *   3,3,3   => 5.196152422706632
  *   1,2,3   => 3.741657386773941
   */
-  function getParallelepipedDiagonal(a, b, c) {
-    return Math.sqrt(Math.pow(a, 2)+Math.pow(b, 2)+Math.pow(c, 2))
-  }
+function getParallelepipedDiagonal(a, b, c) {
+  return Math.sqrt(a ** 2 + b ** 2) + c ** 2;
+}
 
 
 /**
@@ -180,8 +180,8 @@ function parseNumberFromString(value) {
  *   1678, 2  => 1700
  *   1678, 3  => 2000
  */
-function roundToPowerOfTen(/* num, pow */) {
-  throw new Error('Not implemented');
+function roundToPowerOfTen(num, pow) {
+  return Math.round(num / (10 ** pow)) * (10 ** pow);
 }
 
 /**
