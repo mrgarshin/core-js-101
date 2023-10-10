@@ -60,8 +60,12 @@ function getFactorial(/* n */) {
  *   5,10  =>  45 ( = 5+6+7+8+9+10 )
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
-function getSumBetweenNumbers(/* n1, n2 */) {
-  throw new Error('Not implemented');
+function getSumBetweenNumbers(n1, n2) {
+  let counter = 0;
+  for (let i = n1; i <= n2; i += 1) {
+    counter += i;
+  }
+  return counter;
 }
 
 
@@ -268,8 +272,10 @@ function isCreditCardNumber(/* ccn */) {
  *   10000 ( 1+0+0+0+0 = 1 ) => 1
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
-function getDigitalRoot(/* num */) {
-  throw new Error('Not implemented');
+function getDigitalRoot(num) {
+  const arr = num.toString().split('');
+  const sum = arr.reduce((acc, i) => acc + +i, 0);
+  return sum < 9 ? sum : sum.toString().split('').reduce((acc, i) => acc + +i, 0);
 }
 
 
@@ -319,8 +325,14 @@ function isBracketsBalanced(/* str */) {
  *    365, 4  => '11231'
  *    365, 10 => '365'
  */
-function toNaryString(/* num, n */) {
-  throw new Error('Not implemented');
+function toNaryString(num, n) {
+  let result = '';
+  if (n !== 10) {
+    result = num.toString(n);
+  } else {
+    result = num.toString();
+  }
+  return result;
 }
 
 
